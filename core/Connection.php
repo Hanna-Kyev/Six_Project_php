@@ -1,24 +1,25 @@
 <?php
 
-class Connection
+class Connection extends PDO
 {
-    public $pdo;
+    protected static $instance;
+    protected static $config = [];
 
-    public function __construct(array $config)
+    public function __construct($dsn, $dbname, $dbpass, $options)
     {
-        try{
-            $this->pdo = new PDO(
-                $this->makeDsn($config['db']),
-                $config['user'],
-                $config['password'],
-                $config['options'] 
-            );
-        } catch (PDOException $e){
-            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        parent::__construct($dsn, $dbname, $dbpass, $options);
+    }  
+    
+    public static function connect(){
+        self::$config = require_once DB_CONFIG_FILE;
+        if(!self::$instance){
+            $dsn = self::makeDsn(self::$config['db']);
+            self::$instance = new Connection($dsn, self::$config['user'], self::$config['password'], self::$config['options']);
         }
+        return self::$instance;       
     }
 
-    private function makeDsn($config){
+    private static function makeDsn($config){
         $dsn = $config['driver'] . ':';
         unset($config['driver']);
         foreach ($config as $key => $value) {

@@ -16,7 +16,7 @@
                 </div>                
                 <div class="form-group form-check">
                     <input type="checkbox" class="form-check-input" id="status" name="status"
-                    <?php echo $category->status? 'checked':''?>> 
+                    <?php echo ($category->status==1)?  'checked':''?>> 
                     <label class="form-check-label" for="status">Is Active?</label>
                 </div>
                 <button type="submit" class="btn btn-primary">Update Category</button>

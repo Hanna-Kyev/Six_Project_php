@@ -13,16 +13,14 @@ class ContactsController extends Controller
         $this->view->render('contacts/index', compact('title', 'subtitle', 'address', 'messages'));
     }
 
-    
-
 }
 
 $config = require_once CONFIG. '/db.php';
-// $address = config('configs');
-// $title = 'Contact Us';
-// $subtitle = 'Our Address';
-// $messages = [];
-// $error = null;
+$address = config('configs');
+$title = 'Contact Us';
+$subtitle = 'Our Address';
+$messages = [];
+$error = null;
 
 // $conn = mysqli_connect($config ['db'] ['DB_HOST'], 
 // $config ['DB_USERNAME'], $config ['DB_PASSWORD'], 
@@ -40,10 +38,7 @@ if(!empty($_POST)){
     }
 }
 
-// $sql = "DELETE FROM guestbook";
-// mysqli_query($conn, $sql);
-
-$sql = "SELECT * FROM guestbook";
+// $sql = "SELECT * FROM guestbook";
 // $result = mysqli_query($conn, $sql);
 // if (mysqli_num_rows($result) > 0) {
 //     $messages = mysqli_fetch_all($result, 1);
@@ -52,5 +47,7 @@ $sql = "SELECT * FROM guestbook";
 //     $error = mysqli_error($conn);
 // }
 // mysqli_close($conn);
+
+
 
 // render('contacts/index', compact('title', 'subtitle', 'address', 'messages'));

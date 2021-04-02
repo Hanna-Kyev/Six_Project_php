@@ -1,318 +1,652 @@
-[20-Mar-2021 20:36:48 Europe/Kiev] PHP Fatal error:  Uncaught Error: Class "Admin\DashboardController" not found in C:\xampp\htdocs\spider.com\core\Router.php:23
+[23-Mar-2021 16:47:49 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in C:\xampp\htdocs\spider.com\core\Model.php:55
 Stack trace:
-#0 C:\xampp\htdocs\spider.com\bootstrap\app.php(55): require_once()
-#1 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
-#2 {main}
-  thrown in C:\xampp\htdocs\spider.com\core\Router.php on line 23
-[21-Mar-2021 12:43:55 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function render() in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php:9
+#0 C:\xampp\htdocs\spider.com\core\Model.php(55): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(46): Model->update('7', Array)
+#2 C:\xampp\htdocs\spider.com\core\Router.php(30): CategoryController->update(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(35): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'update')
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 55
+[23-Mar-2021 16:48:51 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= ? LIMIT 1' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:40
 Stack trace:
-#0 C:\xampp\htdocs\spider.com\core\Router.php(32): CategoryController->index()
-#1 C:\xampp\htdocs\spider.com\core\Router.php(40): initController('C:\\xampp\\htdocs...', Object(CategoryController), 'index')
-#2 C:\xampp\htdocs\spider.com\core\App.php(32): require_once('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\spider.com\bootstrap\app.php(47): App->run()
-#4 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-  thrown in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 9
-[21-Mar-2021 13:11:04 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function render() in C:\xampp\htdocs\spider.com\app\Controllers\HomeController.php:11
+#0 C:\xampp\htdocs\spider.com\core\Model.php(40): PDO->prepare('DELETE FROMcate...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(54): Model->destroy('9')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(30): CategoryController->destroy(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(43): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 40
+[23-Mar-2021 17:01:29 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 22
+[23-Mar-2021 17:01:36 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= ? LIMIT 1' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:40
 Stack trace:
-#0 C:\xampp\htdocs\spider.com\core\Router.php(32): HomeController->index()
-#1 C:\xampp\htdocs\spider.com\core\Router.php(40): initController('C:\\xampp\\htdocs...', Object(HomeController), 'index')
-#2 C:\xampp\htdocs\spider.com\core\App.php(40): require_once('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\spider.com\bootstrap\app.php(47): App->run()
-#4 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-  thrown in C:\xampp\htdocs\spider.com\app\Controllers\HomeController.php on line 11
-[21-Mar-2021 13:12:17 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function render() on null in C:\xampp\htdocs\spider.com\app\Controllers\HomeController.php:12
+#0 C:\xampp\htdocs\spider.com\core\Model.php(40): PDO->prepare('DELETE FROMcate...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(54): Model->destroy('10')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(30): CategoryController->destroy(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(43): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 40
+[23-Mar-2021 17:03:47 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* FROMcategoriesWHEREid= ? LIMIT 1' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:40
 Stack trace:
-#0 C:\xampp\htdocs\spider.com\core\Router.php(32): HomeController->index()
-#1 C:\xampp\htdocs\spider.com\core\Router.php(40): initController('C:\\xampp\\htdocs...', Object(HomeController), 'index')
-#2 C:\xampp\htdocs\spider.com\core\App.php(40): require_once('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\spider.com\bootstrap\app.php(47): App->run()
-#4 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-  thrown in C:\xampp\htdocs\spider.com\app\Controllers\HomeController.php on line 12
-[21-Mar-2021 13:12:21 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function render() on null in C:\xampp\htdocs\spider.com\app\Controllers\HomeController.php:12
+#0 C:\xampp\htdocs\spider.com\core\Model.php(40): PDO->prepare('DELETE * FROMca...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(54): Model->destroy('10')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(30): CategoryController->destroy(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(43): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 40
+[23-Mar-2021 17:16:18 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 46
+[23-Mar-2021 17:16:18 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in C:\xampp\htdocs\spider.com\core\Model.php:55
 Stack trace:
-#0 C:\xampp\htdocs\spider.com\core\Router.php(32): HomeController->index()
-#1 C:\xampp\htdocs\spider.com\core\Router.php(40): initController('C:\\xampp\\htdocs...', Object(HomeController), 'index')
-#2 C:\xampp\htdocs\spider.com\core\App.php(40): require_once('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\spider.com\bootstrap\app.php(47): App->run()
-#4 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-  thrown in C:\xampp\htdocs\spider.com\app\Controllers\HomeController.php on line 12
-[21-Mar-2021 13:12:30 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function render() in C:\xampp\htdocs\spider.com\app\Controllers\ErrorController.php:9
+#0 C:\xampp\htdocs\spider.com\core\Model.php(55): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(47): Model->update('10', Array)
+#2 C:\xampp\htdocs\spider.com\core\Router.php(30): CategoryController->update(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(35): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'update')
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 55
+[23-Mar-2021 17:23:01 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* FROMcategoriesWHEREid= ? LIMIT 1' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:40
 Stack trace:
-#0 C:\xampp\htdocs\spider.com\core\Router.php(46): include_once()
-#1 C:\xampp\htdocs\spider.com\core\App.php(40): require_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\spider.com\bootstrap\app.php(47): App->run()
-#3 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
-#4 {main}
-  thrown in C:\xampp\htdocs\spider.com\app\Controllers\ErrorController.php on line 9
-[21-Mar-2021 13:12:31 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function render() in C:\xampp\htdocs\spider.com\app\Controllers\ErrorController.php:9
+#0 C:\xampp\htdocs\spider.com\core\Model.php(40): PDO->prepare('DELETE * FROMca...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(55): Model->destroy('7')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(30): CategoryController->destroy(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(43): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 40
+[23-Mar-2021 17:23:46 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= ? LIMIT 1' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:40
 Stack trace:
-#0 C:\xampp\htdocs\spider.com\core\Router.php(46): include_once()
-#1 C:\xampp\htdocs\spider.com\core\App.php(40): require_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\spider.com\bootstrap\app.php(47): App->run()
-#3 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
-#4 {main}
-  thrown in C:\xampp\htdocs\spider.com\app\Controllers\ErrorController.php on line 9
-[21-Mar-2021 13:12:31 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function render() in C:\xampp\htdocs\spider.com\app\Controllers\ErrorController.php:9
+#0 C:\xampp\htdocs\spider.com\core\Model.php(40): PDO->prepare('DELETE  FROMcat...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(55): Model->destroy('7')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(30): CategoryController->destroy(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(43): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 40
+[23-Mar-2021 17:26:18 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= ? LIMIT 1' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:40
 Stack trace:
-#0 C:\xampp\htdocs\spider.com\core\Router.php(46): include_once()
-#1 C:\xampp\htdocs\spider.com\core\App.php(40): require_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\spider.com\bootstrap\app.php(47): App->run()
-#3 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
-#4 {main}
-  thrown in C:\xampp\htdocs\spider.com\app\Controllers\ErrorController.php on line 9
-[22-Mar-2021 11:24:28 Europe/Kiev] PHP Warning:  Undefined array key "DB_HOST" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 18
-[22-Mar-2021 11:24:28 Europe/Kiev] PHP Warning:  Undefined array key "DB_USERNAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 19
-[22-Mar-2021 11:24:28 Europe/Kiev] PHP Warning:  Undefined array key "DB_PASSWORD" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 19
-[22-Mar-2021 11:24:28 Europe/Kiev] PHP Warning:  Undefined array key "DB_NAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 20
-[22-Mar-2021 11:24:28 Europe/Kiev] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 20
-[22-Mar-2021 11:24:28 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php:38
+#0 C:\xampp\htdocs\spider.com\core\Model.php(40): PDO->prepare('DELETE  FROMcat...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(55): Model->destroy('7')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(30): CategoryController->destroy(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(45): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 40
+[23-Mar-2021 17:28:14 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= ? LIMIT 1' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:40
 Stack trace:
-#0 C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php(38): mysqli_query(false, 'SELECT * FROM g...')
+#0 C:\xampp\htdocs\spider.com\core\Model.php(40): PDO->prepare('DELETE  FROMcat...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(55): Model->destroy('7')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(50): CategoryController->destroy(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(65): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 40
+[23-Mar-2021 17:28:21 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= ? LIMIT 1' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:40
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Model.php(40): PDO->prepare('DELETE  FROMcat...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(55): Model->destroy('7')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(50): CategoryController->destroy(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(65): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 40
+[23-Mar-2021 17:29:37 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:40
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Model.php(40): PDO->prepare('DELETE  FROMcat...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(55): Model->destroy('7')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(50): CategoryController->destroy(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(65): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 40
+[23-Mar-2021 17:29:41 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:40
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Model.php(40): PDO->prepare('DELETE  FROMcat...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(55): Model->destroy('7')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(50): CategoryController->destroy(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(65): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 40
+[23-Mar-2021 17:44:34 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in C:\xampp\htdocs\spider.com\core\Model.php:55
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Model.php(55): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(48): Model->update('10', Array)
+#2 C:\xampp\htdocs\spider.com\core\Router.php(50): CategoryController->update(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(56): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'update')
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 55
+[23-Mar-2021 17:47:28 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 47
+[23-Mar-2021 17:49:07 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 47
+[23-Mar-2021 17:54:50 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 47
+[23-Mar-2021 17:54:59 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 47
+[23-Mar-2021 17:55:24 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 47
+[23-Mar-2021 17:56:50 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 47
+[23-Mar-2021 18:10:36 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 47
+[23-Mar-2021 18:10:36 Europe/Kiev] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\spider.com\core\Model.php on line 46
+[23-Mar-2021 18:13:06 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 47
+[23-Mar-2021 18:14:58 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 47
+[23-Mar-2021 18:21:21 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 47
+[23-Mar-2021 18:22:10 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 47
+[23-Mar-2021 19:46:21 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 47
+[23-Mar-2021 19:46:41 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 47
+[23-Mar-2021 19:47:40 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 47
+[23-Mar-2021 19:56:00 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 47
+[23-Mar-2021 19:56:13 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 47
+[23-Mar-2021 19:56:25 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= ? LIMIT 1' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:40
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Model.php(40): PDO->prepare('DELETE  FROMcat...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(56): Model->destroy('10')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(50): CategoryController->destroy(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(65): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 40
+[23-Mar-2021 19:57:09 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* FROMcategoriesWHEREid= ? LIMIT 1' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:40
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Model.php(40): PDO->prepare('DELETE * FROMca...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(56): Model->destroy('10')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(50): CategoryController->destroy(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(65): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 40
+[23-Mar-2021 20:38:07 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 22
+[23-Mar-2021 20:39:17 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= ? LIMIT 1' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:40
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Model.php(40): PDO->prepare('DELETE FROMcate...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(56): Model->destroy('11')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(50): CategoryController->destroy(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(65): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 40
+[24-Mar-2021 11:22:13 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= ? LIMIT 1' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:40
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Model.php(40): PDO->prepare('DELETE FROMcate...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(56): Model->destroy('11')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(50): CategoryController->destroy(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(65): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 40
+[24-Mar-2021 11:41:41 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= ? LIMIT 1' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:40
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Model.php(40): PDO->prepare('DELETE FROMcate...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(56): Model->destroy('11')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(50): CategoryController->destroy(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(65): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 40
+[24-Mar-2021 11:43:33 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 2031  in C:\xampp\htdocs\spider.com\core\Model.php:30
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Model.php(30): PDOStatement->execute()
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(23): Model->save(Array)
+#2 C:\xampp\htdocs\spider.com\core\Router.php(50): CategoryController->store(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(56): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'store')
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 30
+[24-Mar-2021 11:44:03 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 22
+[24-Mar-2021 11:44:12 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= ? LIMIT 1' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:40
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Model.php(40): PDO->prepare('DELETE FROMcate...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(56): Model->destroy('12')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(50): CategoryController->destroy(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(65): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 40
+[24-Mar-2021 11:46:01 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 47
+[24-Mar-2021 13:51:02 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= ? LIMIT 1' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:40
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Model.php(40): PDO->prepare('DELETE FROMcate...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(56): Model->destroy('12')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(40): CategoryController->destroy(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(55): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 40
+[26-Mar-2021 17:00:17 Europe/Kiev] PHP Warning:  Undefined variable $conn in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 33
+[26-Mar-2021 17:00:17 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: mysqli_real_escape_string(): Argument #1 ($mysql) must be of type mysqli, null given in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php:33
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php(33): mysqli_real_escape_string(NULL, 'don;t')
 #1 C:\xampp\htdocs\spider.com\core\Router.php(27): include_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\spider.com\core\Router.php(36): Router->init('C:\\xampp\\htdocs...', 'ContactsControl...', 'index')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', 'ContactsControl...', 'index')
 #3 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
 #4 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
 #5 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
 #6 {main}
-  thrown in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 38
-[22-Mar-2021 11:28:18 Europe/Kiev] PHP Warning:  Undefined array key "DB_HOST" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 18
-[22-Mar-2021 11:28:18 Europe/Kiev] PHP Warning:  Undefined array key "DB_USERNAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 19
-[22-Mar-2021 11:28:18 Europe/Kiev] PHP Warning:  Undefined array key "DB_PASSWORD" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 19
-[22-Mar-2021 11:28:18 Europe/Kiev] PHP Warning:  Undefined array key "DB_NAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 20
-[22-Mar-2021 11:28:18 Europe/Kiev] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 20
-[22-Mar-2021 11:28:18 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php:38
+  thrown in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 33
+[26-Mar-2021 17:01:49 Europe/Kiev] PHP Warning:  Undefined array key "DB_HOST" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 25
+[26-Mar-2021 17:01:49 Europe/Kiev] PHP Warning:  Undefined array key "DB_USERNAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 26
+[26-Mar-2021 17:01:49 Europe/Kiev] PHP Warning:  Undefined array key "DB_PASSWORD" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 26
+[26-Mar-2021 17:01:49 Europe/Kiev] PHP Warning:  Undefined array key "DB_NAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 27
+[26-Mar-2021 17:01:49 Europe/Kiev] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 27
+[26-Mar-2021 17:01:49 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php:42
 Stack trace:
-#0 C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php(38): mysqli_query(false, 'SELECT * FROM g...')
-#1 C:\xampp\htdocs\spider.com\core\Router.php(26): include_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\spider.com\core\Router.php(35): Router->init('C:\\xampp\\htdocs...', 'ContactsControl...', 'index')
+#0 C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php(42): mysqli_query(false, 'SELECT * FROM g...')
+#1 C:\xampp\htdocs\spider.com\core\Router.php(27): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', 'ContactsControl...', 'index')
 #3 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
 #4 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
 #5 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
 #6 {main}
-  thrown in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 38
-[22-Mar-2021 11:50:34 Europe/Kiev] PHP Warning:  Undefined array key "DB_HOST" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 18
-[22-Mar-2021 11:50:34 Europe/Kiev] PHP Warning:  Undefined array key "DB_USERNAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 18
-[22-Mar-2021 11:50:34 Europe/Kiev] PHP Warning:  Undefined array key "DB_PASSWORD" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 18
-[22-Mar-2021 11:50:34 Europe/Kiev] PHP Warning:  Undefined array key "DB_NAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 18
-[22-Mar-2021 11:50:35 Europe/Kiev] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 18
-[22-Mar-2021 11:50:35 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php:38
+  thrown in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 42
+[26-Mar-2021 17:01:58 Europe/Kiev] PHP Warning:  Undefined array key "DB_HOST" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 25
+[26-Mar-2021 17:01:58 Europe/Kiev] PHP Warning:  Undefined array key "DB_USERNAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 26
+[26-Mar-2021 17:01:58 Europe/Kiev] PHP Warning:  Undefined array key "DB_PASSWORD" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 26
+[26-Mar-2021 17:01:58 Europe/Kiev] PHP Warning:  Undefined array key "DB_NAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 27
+[26-Mar-2021 17:01:58 Europe/Kiev] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 27
+[26-Mar-2021 17:01:58 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php:42
 Stack trace:
-#0 C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php(38): mysqli_query(false, 'SELECT * FROM g...')
-#1 C:\xampp\htdocs\spider.com\core\Router.php(26): include_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\spider.com\core\Router.php(35): Router->init('C:\\xampp\\htdocs...', 'ContactsControl...', 'index')
+#0 C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php(42): mysqli_query(false, 'SELECT * FROM g...')
+#1 C:\xampp\htdocs\spider.com\core\Router.php(27): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', 'ContactsControl...', 'index')
 #3 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
 #4 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
 #5 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
 #6 {main}
-  thrown in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 38
-[22-Mar-2021 11:50:39 Europe/Kiev] PHP Warning:  Undefined array key "DB_HOST" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 18
-[22-Mar-2021 11:50:39 Europe/Kiev] PHP Warning:  Undefined array key "DB_USERNAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 18
-[22-Mar-2021 11:50:39 Europe/Kiev] PHP Warning:  Undefined array key "DB_PASSWORD" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 18
-[22-Mar-2021 11:50:39 Europe/Kiev] PHP Warning:  Undefined array key "DB_NAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 18
-[22-Mar-2021 11:50:39 Europe/Kiev] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 18
-[22-Mar-2021 11:50:39 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php:38
+  thrown in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 42
+[26-Mar-2021 17:02:16 Europe/Kiev] PHP Warning:  Undefined array key "DB_HOST" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 25
+[26-Mar-2021 17:02:16 Europe/Kiev] PHP Warning:  Undefined array key "DB_USERNAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 26
+[26-Mar-2021 17:02:16 Europe/Kiev] PHP Warning:  Undefined array key "DB_PASSWORD" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 26
+[26-Mar-2021 17:02:16 Europe/Kiev] PHP Warning:  Undefined array key "DB_NAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 27
+[26-Mar-2021 17:02:16 Europe/Kiev] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 27
+[26-Mar-2021 17:02:16 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php:42
 Stack trace:
-#0 C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php(38): mysqli_query(false, 'SELECT * FROM g...')
-#1 C:\xampp\htdocs\spider.com\core\Router.php(26): include_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\spider.com\core\Router.php(35): Router->init('C:\\xampp\\htdocs...', 'ContactsControl...', 'index')
+#0 C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php(42): mysqli_query(false, 'SELECT * FROM g...')
+#1 C:\xampp\htdocs\spider.com\core\Router.php(27): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', 'ContactsControl...', 'index')
 #3 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
 #4 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
 #5 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
 #6 {main}
-  thrown in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 38
-[22-Mar-2021 11:50:43 Europe/Kiev] PHP Warning:  Undefined array key "DB_HOST" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 18
-[22-Mar-2021 11:50:43 Europe/Kiev] PHP Warning:  Undefined array key "DB_USERNAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 18
-[22-Mar-2021 11:50:43 Europe/Kiev] PHP Warning:  Undefined array key "DB_PASSWORD" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 18
-[22-Mar-2021 11:50:43 Europe/Kiev] PHP Warning:  Undefined array key "DB_NAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 18
-[22-Mar-2021 11:50:43 Europe/Kiev] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 18
-[22-Mar-2021 11:50:43 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php:38
+  thrown in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 42
+[26-Mar-2021 17:02:19 Europe/Kiev] PHP Warning:  Undefined array key "DB_HOST" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 25
+[26-Mar-2021 17:02:19 Europe/Kiev] PHP Warning:  Undefined array key "DB_USERNAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 26
+[26-Mar-2021 17:02:19 Europe/Kiev] PHP Warning:  Undefined array key "DB_PASSWORD" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 26
+[26-Mar-2021 17:02:19 Europe/Kiev] PHP Warning:  Undefined array key "DB_NAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 27
+[26-Mar-2021 17:02:20 Europe/Kiev] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 27
+[26-Mar-2021 17:02:20 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php:42
 Stack trace:
-#0 C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php(38): mysqli_query(false, 'SELECT * FROM g...')
-#1 C:\xampp\htdocs\spider.com\core\Router.php(26): include_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\spider.com\core\Router.php(35): Router->init('C:\\xampp\\htdocs...', 'ContactsControl...', 'index')
+#0 C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php(42): mysqli_query(false, 'SELECT * FROM g...')
+#1 C:\xampp\htdocs\spider.com\core\Router.php(27): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', 'ContactsControl...', 'index')
 #3 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
 #4 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
 #5 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
 #6 {main}
-  thrown in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 38
-[22-Mar-2021 11:50:53 Europe/Kiev] PHP Warning:  Undefined array key "DB_HOST" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 18
-[22-Mar-2021 11:50:53 Europe/Kiev] PHP Warning:  Undefined array key "DB_USERNAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 18
-[22-Mar-2021 11:50:53 Europe/Kiev] PHP Warning:  Undefined array key "DB_PASSWORD" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 18
-[22-Mar-2021 11:50:53 Europe/Kiev] PHP Warning:  Undefined array key "DB_NAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 18
-[22-Mar-2021 11:50:53 Europe/Kiev] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 18
-[22-Mar-2021 11:50:53 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php:38
+  thrown in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 42
+[26-Mar-2021 17:02:35 Europe/Kiev] PHP Warning:  Undefined array key "DB_HOST" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 25
+[26-Mar-2021 17:02:35 Europe/Kiev] PHP Warning:  Undefined array key "DB_USERNAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 26
+[26-Mar-2021 17:02:35 Europe/Kiev] PHP Warning:  Undefined array key "DB_PASSWORD" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 26
+[26-Mar-2021 17:02:35 Europe/Kiev] PHP Warning:  Undefined array key "DB_NAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 27
+[26-Mar-2021 17:02:35 Europe/Kiev] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 27
+[26-Mar-2021 17:02:35 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php:42
 Stack trace:
-#0 C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php(38): mysqli_query(false, 'SELECT * FROM g...')
-#1 C:\xampp\htdocs\spider.com\core\Router.php(26): include_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\spider.com\core\Router.php(35): Router->init('C:\\xampp\\htdocs...', 'ContactsControl...', 'index')
+#0 C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php(42): mysqli_query(false, 'SELECT * FROM g...')
+#1 C:\xampp\htdocs\spider.com\core\Router.php(27): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', 'ContactsControl...', 'index')
 #3 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
 #4 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
 #5 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
 #6 {main}
-  thrown in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 38
-[22-Mar-2021 11:55:01 Europe/Kiev] PHP Warning:  file_get_contents(C:\xampp\htdocs\spider.com/config/contacts.json): Failed to open stream: No such file or directory in C:\xampp\htdocs\spider.com\bootstrap\app.php on line 14
-[22-Mar-2021 11:55:01 Europe/Kiev] PHP Warning:  Undefined array key "DB_HOST" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 46
-[22-Mar-2021 11:55:01 Europe/Kiev] PHP Warning:  Undefined array key "DB_USERNAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 46
-[22-Mar-2021 11:55:01 Europe/Kiev] PHP Warning:  Undefined array key "DB_PASSWORD" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 46
-[22-Mar-2021 11:55:01 Europe/Kiev] PHP Warning:  Undefined array key "DB_NAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 46
-[22-Mar-2021 11:55:01 Europe/Kiev] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 46
-[22-Mar-2021 11:55:01 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php:48
+  thrown in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 42
+[26-Mar-2021 17:04:08 Europe/Kiev] PHP Warning:  Undefined array key "DB_HOST" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 25
+[26-Mar-2021 17:04:08 Europe/Kiev] PHP Warning:  Undefined array key "DB_USERNAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 26
+[26-Mar-2021 17:04:08 Europe/Kiev] PHP Warning:  Undefined array key "DB_PASSWORD" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 26
+[26-Mar-2021 17:04:08 Europe/Kiev] PHP Warning:  Undefined array key "DB_NAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 27
+[26-Mar-2021 17:04:08 Europe/Kiev] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 27
+[26-Mar-2021 17:04:08 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php:42
 Stack trace:
-#0 C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php(48): mysqli_query(false, 'SELECT * FROM g...')
-#1 C:\xampp\htdocs\spider.com\core\Router.php(26): include_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\spider.com\core\Router.php(35): Router->init('C:\\xampp\\htdocs...', 'ContactsControl...', 'index')
+#0 C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php(42): mysqli_query(false, 'DELETE FROM gue...')
+#1 C:\xampp\htdocs\spider.com\core\Router.php(27): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', 'ContactsControl...', 'index')
 #3 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
 #4 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
 #5 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
 #6 {main}
-
-Next TypeError: mysqli_close(): Argument #1 ($mysql) must be of type mysqli, bool given in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php:59
+  thrown in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 42
+[26-Mar-2021 17:04:11 Europe/Kiev] PHP Warning:  Undefined array key "DB_HOST" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 25
+[26-Mar-2021 17:04:11 Europe/Kiev] PHP Warning:  Undefined array key "DB_USERNAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 26
+[26-Mar-2021 17:04:11 Europe/Kiev] PHP Warning:  Undefined array key "DB_PASSWORD" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 26
+[26-Mar-2021 17:04:11 Europe/Kiev] PHP Warning:  Undefined array key "DB_NAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 27
+[26-Mar-2021 17:04:11 Europe/Kiev] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 27
+[26-Mar-2021 17:04:12 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php:42
 Stack trace:
-#0 C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php(59): mysqli_close(false)
-#1 C:\xampp\htdocs\spider.com\core\Router.php(26): include_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\spider.com\core\Router.php(35): Router->init('C:\\xampp\\htdocs...', 'ContactsControl...', 'index')
+#0 C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php(42): mysqli_query(false, 'DELETE FROM gue...')
+#1 C:\xampp\htdocs\spider.com\core\Router.php(27): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', 'ContactsControl...', 'index')
 #3 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
 #4 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
 #5 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
 #6 {main}
-  thrown in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 59
-[22-Mar-2021 11:55:03 Europe/Kiev] PHP Warning:  file_get_contents(C:\xampp\htdocs\spider.com/config/contacts.json): Failed to open stream: No such file or directory in C:\xampp\htdocs\spider.com\bootstrap\app.php on line 14
-[22-Mar-2021 11:55:03 Europe/Kiev] PHP Warning:  Undefined array key "DB_HOST" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 46
-[22-Mar-2021 11:55:03 Europe/Kiev] PHP Warning:  Undefined array key "DB_USERNAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 46
-[22-Mar-2021 11:55:03 Europe/Kiev] PHP Warning:  Undefined array key "DB_PASSWORD" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 46
-[22-Mar-2021 11:55:03 Europe/Kiev] PHP Warning:  Undefined array key "DB_NAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 46
-[22-Mar-2021 11:55:03 Europe/Kiev] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 46
-[22-Mar-2021 11:55:03 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php:48
+  thrown in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 42
+[26-Mar-2021 17:04:14 Europe/Kiev] PHP Warning:  Undefined array key "DB_HOST" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 25
+[26-Mar-2021 17:04:14 Europe/Kiev] PHP Warning:  Undefined array key "DB_USERNAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 26
+[26-Mar-2021 17:04:14 Europe/Kiev] PHP Warning:  Undefined array key "DB_PASSWORD" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 26
+[26-Mar-2021 17:04:14 Europe/Kiev] PHP Warning:  Undefined array key "DB_NAME" in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 27
+[26-Mar-2021 17:04:14 Europe/Kiev] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 27
+[26-Mar-2021 17:04:15 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php:42
 Stack trace:
-#0 C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php(48): mysqli_query(false, 'SELECT * FROM g...')
-#1 C:\xampp\htdocs\spider.com\core\Router.php(26): include_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\spider.com\core\Router.php(35): Router->init('C:\\xampp\\htdocs...', 'ContactsControl...', 'index')
+#0 C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php(42): mysqli_query(false, 'DELETE FROM gue...')
+#1 C:\xampp\htdocs\spider.com\core\Router.php(27): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', 'ContactsControl...', 'index')
 #3 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
 #4 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
 #5 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
 #6 {main}
-
-Next TypeError: mysqli_close(): Argument #1 ($mysql) must be of type mysqli, bool given in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php:59
+  thrown in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 42
+[26-Mar-2021 17:08:08 Europe/Kiev] PHP Fatal error:  Uncaught Error: Class "ConfigController" not found in C:\xampp\htdocs\spider.com\core\Router.php:28
 Stack trace:
-#0 C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php(59): mysqli_close(false)
-#1 C:\xampp\htdocs\spider.com\core\Router.php(26): include_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\spider.com\core\Router.php(35): Router->init('C:\\xampp\\htdocs...', 'ContactsControl...', 'index')
-#3 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
-#4 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
-#5 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
-#6 {main}
-  thrown in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 59
-[22-Mar-2021 15:17:13 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined method CategoryController::delete() in C:\xampp\htdocs\spider.com\core\Router.php:30
-Stack trace:
-#0 C:\xampp\htdocs\spider.com\core\Router.php(43): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'delete', Array)
+#0 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', 'ConfigControlle...', 'index')
 #1 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
 #2 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
 #3 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
 #4 {main}
-  thrown in C:\xampp\htdocs\spider.com\core\Router.php on line 30
-[22-Mar-2021 15:18:31 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: Connection::__construct(): Argument #1 ($config) must be of type array, bool given, called in C:\xampp\htdocs\spider.com\app\Models\Category.php on line 10 and defined in C:\xampp\htdocs\spider.com\core\Connection.php:7
+  thrown in C:\xampp\htdocs\spider.com\core\Router.php on line 28
+[26-Mar-2021 17:09:52 Europe/Kiev] PHP Warning:  Undefined variable $conn in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 33
+[26-Mar-2021 17:09:52 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: mysqli_real_escape_string(): Argument #1 ($mysql) must be of type mysqli, null given in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php:33
 Stack trace:
-#0 C:\xampp\htdocs\spider.com\app\Models\Category.php(10): Connection->__construct(true)
-#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(60): Category->__construct()
-#2 C:\xampp\htdocs\spider.com\core\Router.php(30): CategoryController->destroy(Array)
-#3 C:\xampp\htdocs\spider.com\core\Router.php(43): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
+#0 C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php(33): mysqli_real_escape_string(NULL, 'Don't work')
+#1 C:\xampp\htdocs\spider.com\core\Router.php(27): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', 'ContactsControl...', 'index')
+#3 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#4 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#5 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+  thrown in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 33
+[26-Mar-2021 17:11:00 Europe/Kiev] PHP Warning:  Undefined variable $conn in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 33
+[26-Mar-2021 17:11:00 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: mysqli_real_escape_string(): Argument #1 ($mysql) must be of type mysqli, null given in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php:33
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php(33): mysqli_real_escape_string(NULL, 'aaaaaa')
+#1 C:\xampp\htdocs\spider.com\core\Router.php(27): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', 'ContactsControl...', 'index')
+#3 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#4 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#5 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+  thrown in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 33
+[26-Mar-2021 17:11:27 Europe/Kiev] PHP Warning:  Undefined variable $conn in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 33
+[26-Mar-2021 17:11:27 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: mysqli_real_escape_string(): Argument #1 ($mysql) must be of type mysqli, null given in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php:33
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php(33): mysqli_real_escape_string(NULL, 'sss')
+#1 C:\xampp\htdocs\spider.com\core\Router.php(27): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', 'ContactsControl...', 'index')
+#3 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#4 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#5 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+  thrown in C:\xampp\htdocs\spider.com\app\Controllers\ContactsController.php on line 33
+[26-Mar-2021 17:13:04 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= ? LIMIT 1' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:40
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Model.php(40): PDO->prepare('DELETE FROMcate...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(56): Model->destroy('12')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(40): CategoryController->destroy(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(55): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
 #4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
 #5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
 #6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
 #7 {main}
-  thrown in C:\xampp\htdocs\spider.com\core\Connection.php on line 7
-[22-Mar-2021 15:18:35 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: Connection::__construct(): Argument #1 ($config) must be of type array, bool given, called in C:\xampp\htdocs\spider.com\app\Models\Category.php on line 10 and defined in C:\xampp\htdocs\spider.com\core\Connection.php:7
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 40
+[28-Mar-2021 19:01:20 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= ? LIMIT 1' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:40
 Stack trace:
-#0 C:\xampp\htdocs\spider.com\app\Models\Category.php(10): Connection->__construct(true)
-#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(60): Category->__construct()
-#2 C:\xampp\htdocs\spider.com\core\Router.php(30): CategoryController->destroy(Array)
-#3 C:\xampp\htdocs\spider.com\core\Router.php(43): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
+#0 C:\xampp\htdocs\spider.com\core\Model.php(40): PDO->prepare('DELETE FROMcate...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(56): Model->destroy('12')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(40): CategoryController->destroy(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(55): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
 #4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
 #5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
 #6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
 #7 {main}
-  thrown in C:\xampp\htdocs\spider.com\core\Connection.php on line 7
-[22-Mar-2021 15:18:47 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: Connection::__construct(): Argument #1 ($config) must be of type array, bool given, called in C:\xampp\htdocs\spider.com\app\Models\Category.php on line 10 and defined in C:\xampp\htdocs\spider.com\core\Connection.php:7
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 40
+[30-Mar-2021 11:49:30 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= ? LIMIT 1' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:40
 Stack trace:
-#0 C:\xampp\htdocs\spider.com\app\Models\Category.php(10): Connection->__construct(true)
-#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(60): Category->__construct()
-#2 C:\xampp\htdocs\spider.com\core\Router.php(30): CategoryController->destroy(Array)
-#3 C:\xampp\htdocs\spider.com\core\Router.php(43): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
+#0 C:\xampp\htdocs\spider.com\core\Model.php(40): PDO->prepare('DELETE FROMcate...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(56): Model->destroy('12')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(40): CategoryController->destroy(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(55): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
 #4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
 #5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
 #6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
 #7 {main}
-  thrown in C:\xampp\htdocs\spider.com\core\Connection.php on line 7
-[22-Mar-2021 15:20:27 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 22
-[22-Mar-2021 15:28:53 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: Connection::__construct(): Argument #1 ($config) must be of type array, bool given, called in C:\xampp\htdocs\spider.com\app\Models\Category.php on line 10 and defined in C:\xampp\htdocs\spider.com\core\Connection.php:7
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 40
+[30-Mar-2021 11:49:37 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 47
+[31-Mar-2021 18:05:27 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 47
+[31-Mar-2021 21:58:41 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= ? LIMIT 1' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:40
 Stack trace:
-#0 C:\xampp\htdocs\spider.com\app\Models\Category.php(10): Connection->__construct(true)
-#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(60): Category->__construct()
-#2 C:\xampp\htdocs\spider.com\core\Router.php(30): CategoryController->destroy(Array)
-#3 C:\xampp\htdocs\spider.com\core\Router.php(43): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
+#0 C:\xampp\htdocs\spider.com\core\Model.php(40): PDO->prepare('DELETE FROMcate...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(56): Model->destroy('13')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(40): CategoryController->destroy(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(55): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
 #4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
 #5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
 #6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
 #7 {main}
-  thrown in C:\xampp\htdocs\spider.com\core\Connection.php on line 7
-[22-Mar-2021 15:30:08 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: Connection::__construct(): Argument #1 ($config) must be of type array, bool given, called in C:\xampp\htdocs\spider.com\app\Models\Category.php on line 10 and defined in C:\xampp\htdocs\spider.com\core\Connection.php:7
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 40
+[31-Mar-2021 21:59:29 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= ?' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:40
 Stack trace:
-#0 C:\xampp\htdocs\spider.com\app\Models\Category.php(10): Connection->__construct(true)
-#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(60): Category->__construct()
-#2 C:\xampp\htdocs\spider.com\core\Router.php(30): CategoryController->destroy(Array)
-#3 C:\xampp\htdocs\spider.com\core\Router.php(43): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
+#0 C:\xampp\htdocs\spider.com\core\Model.php(40): PDO->prepare('DELETE FROMcate...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(56): Model->destroy('13')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(40): CategoryController->destroy(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(55): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
 #4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
 #5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
 #6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
 #7 {main}
-  thrown in C:\xampp\htdocs\spider.com\core\Connection.php on line 7
-[22-Mar-2021 15:32:00 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 22
-[22-Mar-2021 15:32:23 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 22
-[22-Mar-2021 15:36:37 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: Connection::__construct(): Argument #1 ($config) must be of type array, bool given, called in C:\xampp\htdocs\spider.com\app\Models\Category.php on line 10 and defined in C:\xampp\htdocs\spider.com\core\Connection.php:7
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 40
+[31-Mar-2021 22:00:08 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* FROMcategoriesWHEREid= ?' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:40
 Stack trace:
-#0 C:\xampp\htdocs\spider.com\app\Models\Category.php(10): Connection->__construct(true)
-#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(60): Category->__construct()
-#2 C:\xampp\htdocs\spider.com\core\Router.php(30): CategoryController->destroy(Array)
-#3 C:\xampp\htdocs\spider.com\core\Router.php(43): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
+#0 C:\xampp\htdocs\spider.com\core\Model.php(40): PDO->prepare('DELETE * FROMca...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(56): Model->destroy('13')
+#2 C:\xampp\htdocs\spider.com\core\Router.php(40): CategoryController->destroy(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(55): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
 #4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
 #5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
 #6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
 #7 {main}
-  thrown in C:\xampp\htdocs\spider.com\core\Connection.php on line 7
-[22-Mar-2021 15:36:48 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 45
-[31-Mar-2021 19:57:45 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: Connection::__construct(): Argument #1 ($config) must be of type array, bool given, called in C:\xampp\htdocs\project.com\app\Models\Category.php on line 10 and defined in C:\xampp\htdocs\project.com\core\Connection.php:7
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 40
+[31-Mar-2021 22:11:51 Europe/Kiev] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\spider.com\core\Model.php on line 46
+[31-Mar-2021 22:12:34 Europe/Kiev] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\spider.com\core\Model.php on line 46
+[31-Mar-2021 22:12:34 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = 15' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:54
 Stack trace:
-#0 C:\xampp\htdocs\project.com\app\Models\Category.php(10): Connection->__construct(true)
-#1 C:\xampp\htdocs\project.com\app\Controllers\Admin\CategoryController.php(60): Category->__construct()
-#2 C:\xampp\htdocs\project.com\core\Router.php(30): CategoryController->destroy(Array)
-#3 C:\xampp\htdocs\project.com\core\Router.php(43): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
-#4 C:\xampp\htdocs\project.com\core\App.php(42): Router->run()
-#5 C:\xampp\htdocs\project.com\bootstrap\app.php(21): App->run()
-#6 C:\xampp\htdocs\project.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#0 C:\xampp\htdocs\spider.com\core\Model.php(54): PDO->prepare('UPDATE categori...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(46): Model->update('15', 'mia my mia))) Y...', 1)
+#2 C:\xampp\htdocs\spider.com\core\Router.php(40): CategoryController->update(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'update')
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
 #7 {main}
-  thrown in C:\xampp\htdocs\project.com\core\Connection.php on line 7
-[31-Mar-2021 20:51:10 Europe/Kiev] PHP Warning:  Attempt to read property "name" on bool in C:\xampp\htdocs\project.com\app\Views\admin\categories\show.php on line 11
-[31-Mar-2021 20:51:10 Europe/Kiev] PHP Warning:  Attempt to read property "status" on bool in C:\xampp\htdocs\project.com\app\Views\admin\categories\show.php on line 16
-[02-Apr-2021 16:50:01 Europe/Kiev] PHP Fatal error:  Uncaught Error: Class "ConfigController" not found in C:\xampp\htdocs\project.com\core\Router.php:27
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 54
+[31-Mar-2021 22:13:12 Europe/Kiev] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\spider.com\core\Model.php on line 46
+[31-Mar-2021 22:13:12 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = 15' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:54
 Stack trace:
-#0 C:\xampp\htdocs\project.com\core\Router.php(35): Router->init('C:\\xampp\\htdocs...', 'ConfigControlle...', 'index')
-#1 C:\xampp\htdocs\project.com\core\App.php(42): Router->run()
-#2 C:\xampp\htdocs\project.com\bootstrap\app.php(21): App->run()
-#3 C:\xampp\htdocs\project.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#0 C:\xampp\htdocs\spider.com\core\Model.php(54): PDO->prepare('UPDATE categori...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(46): Model->update('15', 'mia my mia))) Y...', 1)
+#2 C:\xampp\htdocs\spider.com\core\Router.php(40): CategoryController->update(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'update')
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 54
+[31-Mar-2021 22:17:19 Europe/Kiev] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\spider.com\core\Model.php on line 101
+[31-Mar-2021 22:17:19 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = 15' at line 1 in C:\xampp\htdocs\spider.com\core\Model.php:109
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Model.php(109): PDO->prepare('UPDATE categori...')
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(46): Model->update('15', 'mia my mia))) \xD0...', 1)
+#2 C:\xampp\htdocs\spider.com\core\Router.php(40): CategoryController->update(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'update')
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 109
+[31-Mar-2021 22:21:42 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in C:\xampp\htdocs\spider.com\core\Model.php:55
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Model.php(55): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(46): Model->update('15', Array)
+#2 C:\xampp\htdocs\spider.com\core\Router.php(40): CategoryController->update(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'update')
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 55
+[31-Mar-2021 22:22:59 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in C:\xampp\htdocs\spider.com\core\Model.php:55
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Model.php(55): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(46): Model->update('15', Array)
+#2 C:\xampp\htdocs\spider.com\core\Router.php(40): CategoryController->update(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'update')
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 55
+[31-Mar-2021 22:24:15 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in C:\xampp\htdocs\spider.com\core\Model.php:55
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Model.php(55): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(46): Model->update('16', Array)
+#2 C:\xampp\htdocs\spider.com\core\Router.php(40): CategoryController->update(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'update')
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 55
+[31-Mar-2021 23:03:31 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in C:\xampp\htdocs\spider.com\core\Model.php:55
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Model.php(55): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(46): Model->update('16', Array)
+#2 C:\xampp\htdocs\spider.com\core\Router.php(40): CategoryController->update(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'update')
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 55
+[31-Mar-2021 23:03:54 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 22
+[31-Mar-2021 23:10:10 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in C:\xampp\htdocs\spider.com\core\Model.php:55
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Model.php(55): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(46): Model->update('16', Array)
+#2 C:\xampp\htdocs\spider.com\core\Router.php(40): CategoryController->update(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'update')
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 55
+[31-Mar-2021 23:12:36 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in C:\xampp\htdocs\spider.com\core\Model.php:55
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Model.php(55): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(46): Model->update('16', Array)
+#2 C:\xampp\htdocs\spider.com\core\Router.php(40): CategoryController->update(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'update')
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 55
+[31-Mar-2021 23:12:42 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in C:\xampp\htdocs\spider.com\core\Model.php:55
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Model.php(55): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(46): Model->update('16', Array)
+#2 C:\xampp\htdocs\spider.com\core\Router.php(40): CategoryController->update(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'update')
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 55
+[31-Mar-2021 23:12:47 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in C:\xampp\htdocs\spider.com\core\Model.php:55
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Model.php(55): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(46): Model->update('16', Array)
+#2 C:\xampp\htdocs\spider.com\core\Router.php(40): CategoryController->update(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'update')
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 55
+[31-Mar-2021 23:13:37 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in C:\xampp\htdocs\spider.com\core\Model.php:55
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Model.php(55): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(46): Model->update('16', Array)
+#2 C:\xampp\htdocs\spider.com\core\Router.php(40): CategoryController->update(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'update')
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 55
+[31-Mar-2021 23:23:05 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in C:\xampp\htdocs\spider.com\core\Model.php:55
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Model.php(55): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php(46): Model->update('16', Array)
+#2 C:\xampp\htdocs\spider.com\core\Router.php(40): CategoryController->update(Array)
+#3 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'update')
+#4 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#5 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#6 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\spider.com\core\Model.php on line 55
+[31-Mar-2021 23:41:59 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 22
+[01-Apr-2021 18:09:22 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 22
+[01-Apr-2021 18:09:47 Europe/Kiev] PHP Fatal error:  Uncaught Error: Class "ConfigController" not found in C:\xampp\htdocs\spider.com\core\Router.php:28
+Stack trace:
+#0 C:\xampp\htdocs\spider.com\core\Router.php(46): Router->init('C:\\xampp\\htdocs...', 'ConfigControlle...', 'index')
+#1 C:\xampp\htdocs\spider.com\core\App.php(42): Router->run()
+#2 C:\xampp\htdocs\spider.com\bootstrap\app.php(21): App->run()
+#3 C:\xampp\htdocs\spider.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
 #4 {main}
-  thrown in C:\xampp\htdocs\project.com\core\Router.php on line 27
-[02-Apr-2021 16:50:27 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: Connection::__construct(): Argument #1 ($config) must be of type array, bool given, called in C:\xampp\htdocs\project.com\app\Models\Category.php on line 10 and defined in C:\xampp\htdocs\project.com\core\Connection.php:7
-Stack trace:
-#0 C:\xampp\htdocs\project.com\app\Models\Category.php(10): Connection->__construct(true)
-#1 C:\xampp\htdocs\project.com\app\Controllers\Admin\CategoryController.php(60): Category->__construct()
-#2 C:\xampp\htdocs\project.com\core\Router.php(30): CategoryController->destroy(Array)
-#3 C:\xampp\htdocs\project.com\core\Router.php(43): Router->init('C:\\xampp\\htdocs...', Object(CategoryController), 'destroy', Array)
-#4 C:\xampp\htdocs\project.com\core\App.php(42): Router->run()
-#5 C:\xampp\htdocs\project.com\bootstrap\app.php(21): App->run()
-#6 C:\xampp\htdocs\project.com\public\index.php(2): require_once('C:\\xampp\\htdocs...')
-#7 {main}
-  thrown in C:\xampp\htdocs\project.com\core\Connection.php on line 7
+  thrown in C:\xampp\htdocs\spider.com\core\Router.php on line 28
+[02-Apr-2021 16:49:45 Europe/Kiev] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\spider.com\app\Controllers\Admin\CategoryController.php on line 47

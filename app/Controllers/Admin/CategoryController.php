@@ -20,7 +20,7 @@ class CategoryController extends Controller
     public function store()
     {
         $status = $this->request->data['status'] ? 1:0;
-        (new Category())->save($this->request->data['name'], $status);
+        (new Category())->save(['name'=>$this->request->data['name'], 'status'=>$status]);
         return header('Location: /admin/categories');
     }
 
@@ -42,8 +42,10 @@ class CategoryController extends Controller
 
     public function update()
     {
+        // var_dump($this->request);
+        // exit();
         $status = $this->request->data['status'] ? 1:0;
-        (new Category())->update($this->request->data['id'], $this->request->data['name'], $status);
+        (new Category())->update($this->request->data['id'], ['name'=>$this->request->data['name'], 'status'=>$status]);
         return header('Location: /admin/categories');
     }
 
